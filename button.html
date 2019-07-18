@@ -1,0 +1,88 @@
+<style>
+.focus {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+:focus {
+  outline: 5px red solid;
+}
+
+.split-in-two {
+  display: grid;
+  grid-template: 'half half' / 1fr 1fr;
+  width: 100%;
+}
+
+.half {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 8px;
+}
+</style>
+
+<h1>Button</h1>
+
+<div class="focus" tabindex="0">
+  click me to show focus
+</div>
+
+<div class="split-in-two">
+  <div class="half">
+    <h2>div button</h2>
+
+    <style>
+      .my-button {
+        display: inline-block;
+        padding: 4px 16px;
+
+        outline: none;
+        background: hsl(80deg, 50%, 50%);
+        color: white;
+
+        text-align: center;
+        font-size: 1rem;
+      }
+      .my-button:hover {
+        background: hsl(80deg, 50%, 30%);
+      }
+      .my-button:active {
+        background: hsl(80deg, 50%, 60%);
+      }
+    </style>
+    <div class="my-button">
+      Click me
+    </div>
+    <script>
+      document.querySelector(".my-button").addEventListener('click', () => alert("poke!"))
+    </script>
+  </div>
+  <div class="half">
+    <h2>button button</h2>
+
+    <style>
+      .not-my-button {
+        padding: 4px 16px;
+        border: none;
+
+        background-color: hsl(80deg, 50%, 50%);
+        color: white;
+        font-size: 1rem;
+      }
+      .not-my-button:hover {
+        background: hsl(80deg, 50%, 30%);
+      }
+      .not-my-button:active {
+        background: hsl(80deg, 50%, 60%);
+      }
+    </style>
+    <button class="not-my-button">
+      Click me
+    </button>
+    <script>
+      document.querySelector(".not-my-button").addEventListener("click", () => alert("poke!"))
+    </script>
+  </div>
+</div>

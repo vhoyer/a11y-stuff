@@ -1,0 +1,42 @@
+<style>
+.focus {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+:focus {
+  outline: 5px red solid;
+}
+
+.split-in-two {
+  display: grid;
+  grid-template: 'half half';
+  width: 100%;
+}
+
+.half {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+</style>
+
+<h1>Button</h1>
+
+<div class="focus" tabindex="0">
+  click me to show focus
+</div>
+
+<div class="split-in-two">
+  <div class="half">
+    <h2>Version A</h2>
+
+    oi
+  </div>
+  <div class="half">
+    <h2>Version B</h2>
+
+    tchau
+  </div>
+</div>
