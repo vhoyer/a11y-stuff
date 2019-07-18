@@ -1,0 +1,60 @@
+<style>
+.focus {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+:focus {
+  outline: 5px red solid;
+}
+
+.split-in-two {
+  display: grid;
+  grid-template: 'half half' / 1fr 1fr;
+  width: 100%;
+}
+
+.half {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.half--a * {
+  outline: none;
+}
+</style>
+
+<h1>No focus style</h1>
+
+<nav>
+  <a href="index.html">menu</a>
+</nav>
+
+<div class="focus" tabindex="0">
+  click me to show focus
+</div>
+
+<div class="split-in-two">
+  <div class="half half--a">
+    <h2>Version A</h2>
+
+    <ul>
+      <li><a href="nofocusstyle.html">no focus style</a></li>
+      <li><a href="nofocusstyledrastic.html">no focus style drastic exemple</a></li>
+      <li><a href="button.html">simple button</a></li>
+    </ul>
+  </div>
+  <div class="half half--b">
+    <h2>Version B</h2>
+
+    <ul>
+      <li><a href="nofocusstyle.html">no focus style</a></li>
+      <li><a href="nofocusstyledrastic.html">no focus style drastic exemple</a></li>
+      <li><a href="button.html">simple button</a></li>
+      <li><a href="https://querobolsa.com.br/">quero bolsa</a></li>
+    </ul>
+  </div>
+</div>
