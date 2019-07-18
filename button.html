@@ -55,7 +55,16 @@
       Click me
     </div>
     <script>
-      document.querySelector(".my-button").addEventListener('click', () => alert("poke!"))
+      const myButtonAction = () => alert("poke!")
+      const myButton = document.querySelector(".my-button")
+
+      myButton.addEventListener('click', myButtonAction)
+      myButton.addEventListener('keydown', (event) => {
+        if (["Enter", " ", "Spacebar" /*ie11*/].includes(event.key)) {
+          event.preventDefault() // para evitar que a página seja scrollada (spacebar)
+          myButtonAction()
+        }
+      })
     </script>
   </div>
   <div class="half">
